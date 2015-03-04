@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AEDB54E8-14E3-442F-BFBB-9671166A6C89}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Generator</RootNamespace>
+    <AssemblyName>Generator</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Compile Include="Driver.cs" />
+    <Compile Include="Generator.cs" />
+    <Compile Include="Library.cs" />
+    <Compile Include="Options.cs" />
+    <Compile Include="AST\ASTRecord.cs" />
+    <Compile Include="AST\Utils.cs" />
+    <Compile Include="AST\VTables.cs" />
+    <Compile Include="Generators\Marshal.cs" />
+    <Compile Include="Generators\Template.cs" />
+    <Compile Include="Generators\CSharp\CSharpExpressionPrinter.cs" />
+    <Compile Include="Generators\CSharp\CSharpGenerator.cs" />
+    <Compile Include="Generators\CSharp\CSharpMarshal.cs" />
+    <Compile Include="Generators\CSharp\CSharpTextTemplate.cs" />
+    <Compile Include="Generators\CSharp\CSharpTypePrinter.cs" />
+    <Compile Include="Generators\CLI\CLIGenerator.cs" />
+    <Compile Include="Generators\CLI\CLIHeadersTemplate.cs" />
+    <Compile Include="Generators\CLI\CLIMarshal.cs" />
+    <Compile Include="Generators\CLI\CLISourcesTemplate.cs" />
+    <Compile Include="Generators\CLI\CLITextTemplate.cs" />
+    <Compile Include="Generators\CLI\CLITypePrinter.cs" />
+    <Compile Include="Generators\CLI\CLITypeReferences.cs" />
+    <Compile Include="Passes\CheckAbiParameters.cs" />
+    <Compile Include="Passes\CheckAmbiguousFunctions.cs" />
+    <Compile Include="Passes\CheckDuplicatedNamesPass.cs" />
+    <Compile Include="Passes\CheckFlagEnumsPass.cs" />
+    <Compile Include="Passes\CheckIgnoredDecls.cs" />
+    <Compile Include="Passes\CheckMacrosPass.cs" />
+    <Compile Include="Passes\CheckOperatorsOverloads.cs" />
+    <Compile Include="Passes\CheckStaticClass.cs" />
+    <Compile Include="Passes\CheckVirtualOverrideReturnCovariance.cs" />
+    <Compile Include="Passes\CheckVTableComponentsPass.cs" />
+    <Compile Include="Passes\CleanInvalidDeclNamesPass.cs" />
+    <Compile Include="Passes\CleanUnitPass.cs" />
+    <Compile Include="Passes\ConstructorToConversionOperatorPass.cs" />
+    <Compile Include="Passes\FieldToPropertyPass.cs" />
+    <Compile Include="Passes\FindSymbolsPass.cs" />
+    <Compile Include="Passes\FixDefaultParamValuesOfOverridesPass.cs" />
+    <Compile Include="Passes\FunctionToInstanceMethodPass.cs" />
+    <Compile Include="Passes\FunctionToStaticMethodPass.cs" />
+    <Compile Include="Passes\GenerateAbstractImplementationsPass.cs" />
+    <Compile Include="Passes\GenerateInlinesCodePass.cs" />
+    <Compile Include="Passes\GetterSetterToPropertyAdvancedPass.cs" />
+    <Compile Include="Passes\GetterSetterToPropertyPass.cs" />
+    <Compile Include="Passes\HandleDefaultParamValuesPass.cs" />
+    <Compile Include="Passes\MoveFunctionToClassPass.cs" />
+    <Compile Include="Passes\MoveOperatorToClassPass.cs" />
+    <Compile Include="Passes\MultipleInheritancePass.cs" />
+    <Compile Include="Passes\ObjectOverridesPass.cs" />
+    <Compile Include="Passes\ParamTypeToInterfacePass.cs" />
+    <Compile Include="Passes\Pass.cs" />
+    <Compile Include="Passes\PassBuilder.cs" />
+    <Compile Include="Passes\RenamePass.cs" />
+    <Compile Include="Passes\RenameRootNamespaces.cs" />
+    <Compile Include="Passes\ResolveIncompleteDeclsPass.cs" />
+    <Compile Include="Passes\SortDeclarationsPass.cs" />
+    <Compile Include="Types\CppTypePrinter.cs" />
+    <Compile Include="Types\IExpressionPrinter.cs" />
+    <Compile Include="Types\ITypePrinter.cs" />
+    <Compile Include="Types\TypeMap.cs" />
+    <Compile Include="Types\Types.cs" />
+    <Compile Include="Types\Std\Stdlib.cs" />
+    <Compile Include="Utils\FileHashes.cs" />
+    <Compile Include="Utils\Glob.cs" />
+    <Compile Include="Utils\HtmlEncoder.cs" />
+    <Compile Include="Utils\OrderedSet.cs" />
+    <Compile Include="Utils\TextGenerator.cs" />
+    <Compile Include="Utils\Utils.cs" />
+    <Compile Include="Utils\Options.cs" />
+    <Compile Include="Generators\ExtensionMethods.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CppParser\CppParser.csproj">
+      <Project>{F592AFCA-DC15-43B0-AE37-8073B3D7EF05}</Project>
+      <Name>CppParser</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AST\AST.csproj">
+      <Project>{99BD6AD0-472E-434A-BFDD-8162ADEDB69B}</Project>
+      <Name>AST</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{13A9D96C-BAD8-43FC-BCDF-E07714F830AD}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

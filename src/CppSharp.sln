@@ -1,0 +1,69 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{13A9D96C-BAD8-43FC-BCDF-E07714F830AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CppParser", "CppParser\CppParser.csproj", "{F592AFCA-DC15-43B0-AE37-8073B3D7EF05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AST", "AST\AST.csproj", "{99BD6AD0-472E-434A-BFDD-8162ADEDB69B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Generator", "Generator\Generator.csproj", "{AEDB54E8-14E3-442F-BFBB-9671166A6C89}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Generator.Tests", "Generator.Tests\Generator.Tests.csproj", "{17B17F47-1C75-4B5D-8893-DE70CAAB8975}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{13A9D96C-BAD8-43FC-BCDF-E07714F830AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13A9D96C-BAD8-43FC-BCDF-E07714F830AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13A9D96C-BAD8-43FC-BCDF-E07714F830AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13A9D96C-BAD8-43FC-BCDF-E07714F830AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17B17F47-1C75-4B5D-8893-DE70CAAB8975}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17B17F47-1C75-4B5D-8893-DE70CAAB8975}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17B17F47-1C75-4B5D-8893-DE70CAAB8975}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17B17F47-1C75-4B5D-8893-DE70CAAB8975}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99BD6AD0-472E-434A-BFDD-8162ADEDB69B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99BD6AD0-472E-434A-BFDD-8162ADEDB69B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99BD6AD0-472E-434A-BFDD-8162ADEDB69B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99BD6AD0-472E-434A-BFDD-8162ADEDB69B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEDB54E8-14E3-442F-BFBB-9671166A6C89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEDB54E8-14E3-442F-BFBB-9671166A6C89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEDB54E8-14E3-442F-BFBB-9671166A6C89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEDB54E8-14E3-442F-BFBB-9671166A6C89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F592AFCA-DC15-43B0-AE37-8073B3D7EF05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F592AFCA-DC15-43B0-AE37-8073B3D7EF05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F592AFCA-DC15-43B0-AE37-8073B3D7EF05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F592AFCA-DC15-43B0-AE37-8073B3D7EF05}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = None
+		$1.ResourceNamePolicy = FileFormatDefault
+		$0.TextStylePolicy = $2
+		$2.inheritsSet = null
+		$2.scope = text/x-csharp
+		$0.CSharpFormattingPolicy = $3
+		$3.BeforeMethodDeclarationParentheses = False
+		$3.BeforeMethodCallParentheses = False
+		$3.BeforeConstructorDeclarationParentheses = False
+		$3.BeforeIndexerDeclarationBracket = False
+		$3.BeforeDelegateDeclarationParentheses = False
+		$3.AfterDelegateDeclarationParameterComma = True
+		$3.NewParentheses = False
+		$3.SpacesBeforeBrackets = False
+		$3.inheritsSet = Mono
+		$3.inheritsScope = text/x-csharp
+		$3.scope = text/x-csharp
+		$0.TextStylePolicy = $4
+		$4.FileWidth = 120
+		$4.RemoveTrailingWhitespace = False
+		$4.NoTabsAfterNonTabs = True
+		$4.inheritsSet = VisualStudio
+		$4.inheritsScope = text/plain
+		$4.scope = text/plain
+	EndGlobalSection
+EndGlobal

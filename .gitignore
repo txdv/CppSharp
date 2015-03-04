@@ -25,9 +25,7 @@ src/generator/generator
 *.config
 *.vcxproj
 *.filters
-*.sln
 *.metagen
-*.csproj
 *.ilk
 *.manifest
 /build/vs2012
